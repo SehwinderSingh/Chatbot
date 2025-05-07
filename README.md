@@ -72,4 +72,10 @@ Loaded via `Database/001_content.sql`:
 - 3 sample messages
 
 ---
- Thanks 
+# 👾 Errors v/s Expectations 
+- I faced several backend crash, first while setting up docker and was able to solve that but i was stuck at the last step where after login page my main.js was facing issues. 
+- I expected it to be a multitable website which will have a login system and ausers interface which will save chats according to user id.
+
+
+THANKS 
+---------------------------------------------------------------------------
