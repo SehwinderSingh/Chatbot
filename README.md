@@ -4,57 +4,43 @@ Chatbot is a full-stack chat application demonstrating modern web development pr
 
 ---
 
-# 🧱 Project Structure
+Chaticus/
+├── Backend/          # Node.js + Express backendAPI +sql+package.json    + server.json
+├── Frontend/         # Static HTML/CSS/JS frontend served by Nginx
+├── Database/         # SQL files for initial database schema and content
+├── .env              # Environment variables for PostgreSQL and pgAdmin
+└── docker-compose.yml
 
-Chatbot/
-├── Backend/            # Node.js + Express backend API with JWT & PostgreSQL
-│   └── server.js       # Main server logic
-├── Frontend/           # Static frontend served by Nginx
-│   ├── index.html      # UI with login/register and chat area
-│   └── js/main.js      # Client-side logic (register, login, send, load)
-├── Database/           # SQL schema and seed data
-│   ├── 000_init.sql    # Table creation (users, messages)
-│   └── 001_content.sql # Sample data
-├── .env                # Environment variables (used by backend)
-├── nginx.conf          # Custom Nginx config to reverse-proxy /api to backend
-└── docker-compose.yml  # Docker setup for frontend, backend, db, and pgAdmin
-```
 
 ---
 
 # 🚀 How to Run It
 
-> ✅ Prerequisites: [Docker Desktop](https://www.docker.com/products/docker-desktop)
+> Make sure [Docker Desktop] is running.
 
-1. Open a terminal in the `Chatbot/` folder.
-2. Run:
+1. Open a terminal in the 'Chatbot' folder.
+2. Run: docker-compose up --build
 
-```bash
-docker-compose up --build
-```
-
-To **reset the database** (drops data and reloads SQL):
-
-```bash
+To *reset the database* (drops data and reloads SQL):
 docker-compose down --volumes
 docker-compose build --no-cache
 docker-compose up
-```
+
 
 ---
 
-## 🌐 App Features
+# 🌐 App Features
 
 - ✅ User registration and login (secure password hashing with bcrypt)
 - ✅ JWT-based token authentication
-- ✅ PostgreSQL multi-table schema: `users`, `messages`
+- ✅ PostgreSQL multi-table schema: 'users', 'messages'
 - ✅ Message posting & retrieval with timestamps
 - ✅ Fully containerized architecture using Docker Compose
 - ✅ Custom Nginx reverse proxy config
 
 ---
 
-## 🛠️ Tech Stack
+# 🛠️ Tech Stack
 
 - **Frontend**: HTML, CSS, Vanilla JS
 - **Backend**: Node.js, Express
@@ -63,14 +49,14 @@ docker-compose up
 
 ---
 
-## 📝 Credentials (Default)
+# 📝 Credentials (Default)
 
 - pgAdmin: `admin@chaticus.com` / `admin`
 - PostgreSQL DB: `chaticus`, user: `postgres`, password from `.env`
 
 ---
 
-## 📬 API Endpoints
+# 📬 API Endpoints
 
 - `POST /api/register` – Register a user
 - `POST /api/login` – Login and get JWT token
@@ -79,12 +65,11 @@ docker-compose up
 
 ---
 
-## 🧪 Sample Data
+# 🧪 Sample Data
 
 Loaded via `Database/001_content.sql`:
 - 1 user account
 - 3 sample messages
 
 ---
-
-Happy coding! 💬
+ Thanks 
